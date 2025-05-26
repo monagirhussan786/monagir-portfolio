@@ -16,7 +16,7 @@ export default function App() {
   const fullCode = `const express = require('express');
 const app = express();
 app.get('/', (req, res) => {
-  res.send('Hello, MERN!');
+  res.send('Hello, Md Monagir Hussan!');
 });
 app.listen(3000, () => {
   console.log('Server running');
@@ -224,7 +224,7 @@ app.listen(3000, () => {
         <h2>Signature Projects</h2>
         <div className="projects-grid">
           <div className="project">
-            <img src="https://cdn.prod.website-files.com/656e7fbcd9c0664347996e75/65fa70052297b389161ad546_How-is-Artificial-Intelligence-Transforming-eCommerce.jpeg" alt="E-Commerce App" />
+            <img src="/images/eCommerce.jpeg" alt="E-Commerce App" />
             <div className="project-content">
               <h4>E-Commerce Web App</h4>
               <p>A scalable platform with real-time updates, secure payment gateways, and a user-friendly interface.</p>
@@ -239,7 +239,7 @@ app.listen(3000, () => {
             </div>
           </div>
           <div className="project">
-            <img src="https://hive.com/wp-content/uploads/2023/06/connecteam-team-chat-app.webp" alt="Group Chat App" />
+            <img src="/images/group-chat-app.webp" alt="Group Chat App" />
             <div className="project-content">
               <h4>Group Chat App</h4>
               <p>Real-time messaging app with socket-based communication and group chat functionality.</p>
@@ -254,7 +254,7 @@ app.listen(3000, () => {
             </div>
           </div>
           <div className="project">
-            <img src="https://www.salesbook.com/app/uploads/2024/07/04f1d89b-7842-4331-b685-916a2984b81c-1024x618.png" alt="CRM System" />
+            <img src="/images/image-crm.webp" alt="CRM System" />
             <div className="project-content">
               <h4>CRM System</h4>
               <p>A robust tool for managing customer data, sales pipelines, and analytics.</p>
@@ -269,7 +269,7 @@ app.listen(3000, () => {
             </div>
           </div>
           <div className="project">
-            <img src="https://static.sheetgo.com/wp-content/uploads/2020/05/expense-tracker-dashboard.png" alt="Expense Tracker" />
+            <img src="/images/expense-tracker-dashboard.webp" alt="Expense Tracker" />
             <div className="project-content">
               <h4>Expense Tracker App</h4>
               <p>A full-stack finance app with budgeting tools and insightful analytics.</p>
@@ -284,7 +284,7 @@ app.listen(3000, () => {
             </div>
           </div>
           <div className="project">
-            <img src="https://www.agile-hr-analytics.com/wp-content/uploads/2023/02/HR-Gif-Page-10-1-1024x576.gif" alt="Social Media App" />
+            <img src="/images/Social-Media-App.png" alt="Social Media App" />
             <div className="project-content">
               <h4>Social Media App</h4>
               <p>A platform with posts, comments, likes, and real-time notifications.</p>
@@ -299,7 +299,7 @@ app.listen(3000, () => {
             </div>
           </div>
           <div className="project">
-            <img src="https://www.sphinx-solution.com/blog/wp-content/uploads/2022/12/ui-designers.webp" alt="Mobile App Design" />
+            <img src="/images/ui-designers.webp" alt="Mobile App Design" />
             <div className="project-content">
               <h4>Mobile App Design</h4>
               <p>A cross-platform mobile app with intuitive UI/UX and seamless performance.</p>
