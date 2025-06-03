@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import CountUp from 'react-countup';
 import './App.css';
+import { FaJs, FaReact, FaHtml5, FaCss3, FaNodeJs, FaServer, FaDatabase, FaAws, FaDocker, FaGit, FaGithub, FaJira, FaSlack, FaCode } from 'react-icons/fa';
+import { SiRedux, SiGraphql, SiTypescript, SiMongodb, SiMysql, SiPostgresql, SiAmazonwebservices, SiDocker as SiDockerIcon, SiGit as SiGitIcon, SiGithub as SiGithubIcon, SiJira as SiJiraIcon, SiSlack as SiSlackIcon } from 'react-icons/si';
 
 export default function App() {
   const [line1, setLine1] = useState('');
@@ -18,14 +20,18 @@ const app = express();
 app.get('/', (req, res) => {
   res.send('Hello, Md Monagir Hussan!');
 });
+
+app.get('/about', (req, res) => {
+  res.send('This is the About page for Md Monagir Hussan\'s portfolio server.');
+});
+
 app.listen(3000, () => {
-  console.log('Server running');
+  console.log('Server running on port 3000');
 });`;
 
   const toggleNav = () => setIsNavOpen(!isNavOpen);
 
   useEffect(() => {
-    // Hero text typing
     const typeText = async () => {
       for (let i = 0; i <= fullLine1.length; i++) {
         setLine1(fullLine1.slice(0, i));
@@ -38,9 +44,8 @@ app.listen(3000, () => {
       setShowCursor(false);
     };
 
-    // Code typing (starts after 3s delay for Code Matrix animation)
     const typeCode = async () => {
-      await new Promise(resolve => setTimeout(resolve, 3000)); // Delay
+      await new Promise(resolve => setTimeout(resolve, 3000));
       for (let i = 0; i <= fullCode.length; i++) {
         setCodeText(fullCode.slice(0, i));
         await new Promise(resolve => setTimeout(resolve, 50));
@@ -111,26 +116,75 @@ app.listen(3000, () => {
       </section>
 
       <section id="about" className="about">
-        <h2>About Me</h2>
-        <p>
-          I’m a seasoned Full Stack MERN Developer with over 3.6 years of experience, delivering high-impact, scalable web applications. 
-          My expertise spans JavaScript, React.js, Node.js, Express.js, MongoDB, and AWS, with a knack for mentoring teams and optimizing performance. 
-          I thrive on transforming complex challenges into elegant, end-to-end solutions that drive measurable results.
-        </p>
+        <div className="about-card">
+          <h2>About Me</h2>
+          <p>
+            I’m a seasoned Full Stack MERN Developer with over 3.6 years of experience, delivering high-impact, scalable web applications. 
+            My expertise spans JavaScript, React.js, Node.js, Express.js, MongoDB, and AWS, with a knack for mentoring teams and optimizing performance. 
+            I thrive on transforming complex challenges into elegant, end-to-end solutions that drive measurable results.
+          </p>
+        </div>
       </section>
 
       <section id="skills" className="skills">
         <h2>My Expertise</h2>
-        <div className="skill-category">
+        <div className="skill-category technical-skills">
           <h3>Technical Skills</h3>
-          <ul>
-            <li>Frontend: JavaScript, React.js, HTML5, CSS3, Redux, Material UI</li>
-            <li>Backend: Node.js, Express.js, RESTful API, GraphQL, TypeScript</li>
-            <li>Databases: MongoDB, MySQL, PostgreSQL</li>
-            <li>Cloud & DevOps: AWS, Docker, CI/CD Pipelines</li>
-            <li>Version Control & Collaboration: Git, GitHub, Jira, Slack</li>
-            <li>Tools & Methodologies: SDLC, Agile/Scrum, Jira, MS Project</li>
-          </ul>
+          <div className="subcategory">
+            <h4>Frontend</h4>
+            <ul>
+              <li><FaJs /> JavaScript</li>
+              <li><FaReact /> React.js</li>
+              <li><FaHtml5 /> HTML5</li>
+              <li><FaCss3 /> CSS3</li>
+              <li><SiRedux /> Redux</li>
+              <li><FaCode /> Material UI</li>
+            </ul>
+          </div>
+          <div className="subcategory">
+            <h4>Backend</h4>
+            <ul>
+              <li><FaNodeJs /> Node.js</li>
+              <li><FaNodeJs /> Express.js</li>
+              <li><FaServer /> RESTful API</li>
+              <li><SiGraphql /> GraphQL</li>
+              <li><SiTypescript /> TypeScript</li>
+            </ul>
+          </div>
+          <div className="subcategory">
+            <h4>Databases</h4>
+            <ul>
+              <li><SiMongodb /> MongoDB</li>
+              <li><SiMysql /> MySQL</li>
+              <li><SiPostgresql /> PostgreSQL</li>
+            </ul>
+          </div>
+          <div className="subcategory">
+            <h4>Cloud & DevOps</h4>
+            <ul>
+              <li><SiAmazonwebservices /> AWS</li>
+              <li><SiDockerIcon /> Docker</li>
+              <li><FaServer /> CI/CD Pipelines</li>
+            </ul>
+          </div>
+          <div className="subcategory">
+            <h4>Version Control & Collaboration</h4>
+            <ul>
+              <li><SiGitIcon /> Git</li>
+              <li><SiGithubIcon /> GitHub</li>
+              <li><SiJiraIcon /> Jira</li>
+              <li><SiSlackIcon /> Slack</li>
+            </ul>
+          </div>
+          <div className="subcategory">
+            <h4>Tools & Methodologies</h4>
+            <ul>
+              <li><FaServer /> SDLC</li>
+              <li><FaServer /> Agile/Scrum</li>
+              <li><SiJiraIcon /> Jira</li>
+              <li><FaServer /> MS Project</li>
+            </ul>
+          </div>
         </div>
         <div className="skill-category professional-strengths">
           <h3>Professional Strengths</h3>
@@ -153,7 +207,7 @@ app.listen(3000, () => {
             <li>Problem Solving</li>
           </ul>
         </div>
-        <div className="skill-category">
+        <div className="skill-category languages">
           <h3>Languages</h3>
           <ul>
             <li>English (Fluent)</li>
@@ -202,20 +256,26 @@ app.listen(3000, () => {
         <h2>Professional Journey</h2>
         <div className="timeline">
           <div className="entry entry-1">
-            <div className="entry-date">Jun 2022 – Present</div>
-            <h3>Full Stack MERN Developer @ Xotive Technologies</h3>
-            <p>
-              Led an 11-member team to launch an e-commerce platform and ERP system, boosting revenue by 25%. 
-              Achieved a perfect 100/100 Lighthouse score and optimized backend to handle 96,000 req/sec.
-            </p>
+            <div className="entry-icon">💼</div>
+            <div className="entry-content">
+              <div className="entry-date">Jun 2022 – Present</div>
+              <h3>Full Stack MERN Developer @ Xotive Technologies</h3>
+              <p>
+                Led an 11-member team to launch an e-commerce platform and ERP system, boosting revenue by 25%. 
+                Achieved a perfect 100/100 Lighthouse score and optimized backend to handle 96,000 req/sec.
+              </p>
+            </div>
           </div>
           <div className="entry entry-2">
-            <div className="entry-date">Aug 2021 – May 2022</div>
-            <h3>Full Stack Developer @ WebInOrbit</h3>
-            <p>
-              Developed web apps with React, Node.js, and Sails.js, integrating APIs like Google Maps and payment gateways, 
-              while optimizing large-scale data processing.
-            </p>
+            <div className="entry-icon">💻</div>
+            <div className="entry-content">
+              <div className="entry-date">Aug 2021 – May 2022</div>
+              <h3>Full Stack Developer @ WebInOrbit</h3>
+              <p>
+                Developed web apps with React, Node.js, and Sails.js, integrating APIs like Google Maps and payment gateways, 
+                while optimizing large-scale data processing.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -319,11 +379,13 @@ app.listen(3000, () => {
       <section id="certifications" className="certifications">
         <h2>Certifications</h2>
         <div className="certifications-container">
-          <ul className="certifications-list">
-            <li>AWS Certified Solutions Architect – Associate</li>
-            <li>Full Stack Web Development (React & Node.js)</li>
-            <li>Agile Scrum Master</li>
-          </ul>
+          <div className="certifications-list">
+            <ul>
+              <li>AWS Certified Solutions Architect – Associate</li>
+              <li>Full Stack Web Development (React & Node.js)</li>
+              <li>Agile Scrum Master</li>
+            </ul>
+          </div>
           <div className="code-matrix">
             <div className="code-block">
               <pre>
@@ -362,14 +424,16 @@ app.listen(3000, () => {
         <a href="#contact">Get in Touch</a>
       </section>
 
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Noida Electronic City, Sector-62, Noida</p>
-        <p>✉️ mdmonagirhussan99@gmail.com | 📞 +91 6209581793 | +91 8406092514</p>
-        <p>
-          <a href="https://github.com/monagirhussan786" target="_blank" rel="noreferrer">GitHub</a> | 
-          <a href="https://linkedin.com/in/md-monagir-hussan-7140b7266" target="_blank" rel="noreferrer">LinkedIn</a>
-        </p>
+      <section id="contact" className="contact">
+        <div className="contact-card">
+          <h2>Contact Me</h2>
+          <p>Noida Electronic City, Sector-62, Noida</p>
+          <p>✉️ mdmonagirhussan99@gmail.com | 📞 +91 8406092514</p>
+          <div className="contact-links">
+            <a href="https://github.com/monagirhussan786" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/md-monagir-hussan-7140b7266" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
       </section>
 
       <footer>
