@@ -1,60 +1,168 @@
 import React, { useState, useEffect, useRef } from 'react';
 import CountUp from 'react-countup';
 import './App.css';
-import { FaJs, FaReact, FaHtml5, FaCss3, FaNodeJs, FaServer, FaDatabase, FaAws, FaDocker, FaGit, FaGithub, FaJira, FaSlack, FaCode } from 'react-icons/fa';
+import ParticleAnimation from './components/ParticleAnimation';
+import AICodeBlock from './components/AICodeBlock';
+import { FaJs, FaReact, FaHtml5, FaCss3, FaNodeJs, FaServer, FaDatabase, FaAws, FaDocker, FaGit, FaGithub, FaJira, FaSlack, FaCode, FaEnvelope, FaPhone } from 'react-icons/fa';
 import { SiRedux, SiGraphql, SiTypescript, SiMongodb, SiMysql, SiPostgresql, SiAmazonwebservices, SiDocker as SiDockerIcon, SiGit as SiGitIcon, SiGithub as SiGithubIcon, SiJira as SiJiraIcon, SiSlack as SiSlackIcon } from 'react-icons/si';
 
 export default function App() {
   const [line1, setLine1] = useState('');
   const [line2, setLine2] = useState('');
+  const [description, setDescription] = useState('');
   const [showCursor, setShowCursor] = useState(true);
-  const fullLine1 = "Hey There,";
-  const fullLine2 = "I’m Md Monazir Hussan";
+  const fullLine1 = "Hey There";
+  const fullLine2 = "I'm Md Monazir Hussan";
+  const fullDescription = "Engineering Smart, Scalable & AI-Driven Web Platforms with MERN Stack & AWS — Delivering Cloud-Native Solutions from Clean Architecture to Production with End-to-End Ownership, Modern Dev Practices & Real-World Impact";
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [startCount, setStartCount] = useState(false);
   const statsRef = useRef(null);
-  const [codeText, setCodeText] = useState('');
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const fullCode = `const express = require('express');
+  const heroImageRef = useRef(null);
+
+  const fullCode = `// Backend Server Setup (Node.js)
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const dotenv = require('dotenv');
+
+// Initialize Express App
 const app = express();
-app.get('/', (req, res) => {
-  res.send('Hello, Md Monagir Hussan!');
+dotenv.config();
+
+// Middleware Setup
+app.use(cors());
+app.use(express.json());
+
+// Database Connection
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.error('MongoDB Error:', err));
+
+// API Routes
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'Server Running' });
 });
 
-app.get('/about', (req, res) => {
-  res.send('This is the About page for Md Monagir Hussan\'s portfolio server.');
+// User Authentication
+app.post('/api/auth/register', async (req, res) => {
+  try {
+    const { username, email, password } = req.body;
+    const user = new User({ username, email, password });
+    await user.save();
+    res.status(201).json({ message: 'User Created' });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
-app.listen(3000, () => {
-  console.log('Server running on port 3000');
-});`;
+// Protected Route
+app.get('/api/profile', auth, (req, res) => {
+  res.json(req.user);
+});
 
-  const toggleNav = () => setIsNavOpen(!isNavOpen);
+// Error Handler
+app.use((err, req, res, next) => {
+  res.status(500).json({ error: 'Server Error' });
+});
+
+// Start Server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(\`Server on port \${PORT}\`);
+});
+
+// JavaScript Frontend (React)
+const React = require('react');
+const { useState, useEffect } = require('react');
+
+function App() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('/api/data');
+      const result = await response.json();
+      setData(result);
+      setLoading(false);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  return (
+    <div className="app">
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        <div className="data-container">
+          {data.map(item => (
+            <div key={item.id} className="item">
+              {item.name}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Python Backend (Flask)
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+import os
+from dotenv import load_dotenv
+
+app = Flask(__name__)
+CORS(app)
+load_dotenv()
+
+@app.route('/api/python/health', methods=['GET'])
+def health_check():
+    return jsonify({"status": "Python Server Running"})
+
+@app.route('/api/python/data', methods=['POST'])
+def process_data():
+    data = request.json
+    # Process data here
+    return jsonify({"message": "Data processed", "result": data})
+
+if __name__ == '__main__':
+    app.run(port=5001)`;
 
   useEffect(() => {
     const typeText = async () => {
       for (let i = 0; i <= fullLine1.length; i++) {
         setLine1(fullLine1.slice(0, i));
-        await new Promise(resolve => setTimeout(resolve, 200));
+        await new Promise(resolve => setTimeout(resolve, 100));
       }
       for (let i = 0; i <= fullLine2.length; i++) {
         setLine2(fullLine2.slice(0, i));
-        await new Promise(resolve => setTimeout(resolve, 200));
+        await new Promise(resolve => setTimeout(resolve, 100));
       }
       setShowCursor(false);
-    };
 
-    const typeCode = async () => {
-      await new Promise(resolve => setTimeout(resolve, 3000));
-      for (let i = 0; i <= fullCode.length; i++) {
-        setCodeText(fullCode.slice(0, i));
+      for (let i = 0; i <= fullDescription.length; i++) {
+        setDescription(fullDescription.slice(0, i));
         await new Promise(resolve => setTimeout(resolve, 50));
       }
     };
 
     typeText();
-    typeCode();
 
+    if (heroImageRef.current) {
+      const effects = ['glow-effect-1', 'glow-effect-2', 'glow-effect-3'];
+      const randomEffect = effects[Math.floor(Math.random() * effects.length)];
+      heroImageRef.current.classList.add(randomEffect);
+    }
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 300);
     };
@@ -80,38 +188,50 @@ app.listen(3000, () => {
 
   return (
     <>
+      <ParticleAnimation />
       <header>
         <div className="nav-container">
-          <div className="logo"><strong>Full Stack Developer</strong></div>
-          <div className="hamburger" onClick={toggleNav}>☰</div>
-          <nav className={`nav-links ${isNavOpen ? 'active' : ''}`}>
-            <a href="#about" onClick={toggleNav}>About</a>
-            <a href="#skills" onClick={toggleNav}>Skills</a>
-            <a href="#services" onClick={toggleNav}>Services</a>
-            <a href="#experience" onClick={toggleNav}>Experience</a>
-            <a href="#projects" onClick={toggleNav}>Works</a>
-            <a href="#certifications" onClick={toggleNav}>Certifications</a>
-            <a href="#education" onClick={toggleNav}>Education</a>
-            <a href="#contact" onClick={toggleNav}>Contact</a>
+          <div className="logo">Full Stack Developer</div>
+          <div className="hamburger" onClick={() => setIsNavOpen(!isNavOpen)}>☰</div>
+          {/* Mobile Drawer Backdrop */}
+          {isNavOpen && <div className="drawer-backdrop" onClick={() => setIsNavOpen(false)}></div>}
+          {/* Drawer Navigation */}
+          <nav className={`nav-links${isNavOpen ? ' drawer-open' : ''}`}>
+            <a href="#about" onClick={() => setIsNavOpen(false)}>About</a>
+            <a href="#skills" onClick={() => setIsNavOpen(false)}>Skills</a>
+            <a href="#services" onClick={() => setIsNavOpen(false)}>Services</a>
+            <a href="#experience" onClick={() => setIsNavOpen(false)}>Experience</a>
+            <a href="#projects" onClick={() => setIsNavOpen(false)}>Works</a>
+            <a href="#certifications" onClick={() => setIsNavOpen(false)}>Certifications</a>
+            <a href="#education" onClick={() => setIsNavOpen(false)}>Education</a>
+            <a href="#contact" onClick={() => setIsNavOpen(false)}>Contact</a>
           </nav>
         </div>
       </header>
 
       <section className="hero" id="home">
-        <div className="hero-text">
-          <h1>
-            {line1}
-            {line1 === fullLine1 && <br />}
-            {line2}
-            {showCursor && <span className="cursor">|</span>}
-          </h1>
-          <p className="hero-description">Architecting Scalable Systems & Crafting Full Stack Solutions with MERN and AWS</p>
-        </div>
-        <div className="hero-img">
-          <img
-            src="/images/hero.jpg"
-            alt="Md Monazir Hussan"
-          />
+        <div className="hero-content">
+          <div className="hero-text">
+            <h1>
+              {line1}
+              {line1 === fullLine1 && <br />}
+              {line2}
+              {showCursor && <span className="cursor">|</span>}
+            </h1>
+            <p className="hero-description">
+              {description}
+              {description.length < fullDescription.length && <span className="cursor">|</span>}
+            </p>
+          </div>
+          <div className="hero-image" ref={heroImageRef}>
+            <div className="hero-image-inner">
+              <div className="hero-image-front"></div>
+              <div className="hero-image-back">
+                <FaCode size="4em" />
+                <p>Code to Cloud</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -119,15 +239,32 @@ app.listen(3000, () => {
         <div className="about-card">
           <h2>About Me</h2>
           <p>
-            I’m a seasoned Full Stack MERN Developer with over 3.6 years of experience, delivering high-impact, scalable web applications. 
-            My expertise spans JavaScript, React.js, Node.js, Express.js, MongoDB, and AWS, with a knack for mentoring teams and optimizing performance. 
-            I thrive on transforming complex challenges into elegant, end-to-end solutions that drive measurable results.
+          I’m a Full Stack MERN Developer with 3.6+ years of experience in building high-performance, AI-powered web applications using clean architecture and scalable system design. I specialize in combining modern development practices with cutting-edge AI and cloud technologies (AWS) to deliver intelligent, end-to-end solutions that solve real-world problems and drive business value.
           </p>
+        </div>
+      </section>
+
+      <section id="certifications" className="certifications">
+        <h2>Certifications</h2>
+        <div className="certifications-container">
+          <div className="certifications-list">
+            <ul>
+              <li>AWS Certified Solutions Architect – Associate</li>
+              <li>Full Stack Web Development (React & Node.js)</li>
+              <li>Machine Learning & AI Certification</li>
+            </ul>
+          </div>
+          <div className="code-matrix">
+            <AICodeBlock code={fullCode} />
+          </div>
         </div>
       </section>
 
       <section id="skills" className="skills">
         <h2>My Expertise</h2>
+        <p className="expertise-summary">
+          I build high-performance, scalable web applications from the ground up, with deep proficiency in the MERN stack and cloud technologies like AWS. My expertise covers the full development lifecycle, from creating intuitive front-end experiences with React to architecting robust back-end services with Node.js and deploying them with Docker.
+        </p>
         <div className="skill-category technical-skills">
           <h3>Technical Skills</h3>
           <div className="subcategory">
@@ -376,32 +513,6 @@ app.listen(3000, () => {
         </div>
       </section>
 
-      <section id="certifications" className="certifications">
-        <h2>Certifications</h2>
-        <div className="certifications-container">
-          <div className="certifications-list">
-            <ul>
-              <li>AWS Certified Solutions Architect – Associate</li>
-              <li>Full Stack Web Development (React & Node.js)</li>
-              <li>Agile Scrum Master</li>
-            </ul>
-          </div>
-          <div className="code-matrix">
-            <div className="code-block">
-              <pre>
-                {codeText}
-                <span className="typing-cursor">|</span>
-              </pre>
-            </div>
-            <div className="binary-rain"></div>
-            <div className="orbit-icons">
-              <span className="aws-icon">☁️</span>
-              <span className="agile-icon">🔄</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="education" className="education">
         <h2>Education</h2>
         <p>Master of Computer Applications, Monad University, Ghaziabad, UP (07/2019 - 06/2021)</p>
@@ -410,25 +521,34 @@ app.listen(3000, () => {
       <section className="testimonials">
         <h2>What People Say</h2>
         <div className="testimonial">
-          <p>“Monagir’s work delivered instant performance boosts to our platform.”</p>
+          <p>"Monagir's work delivered instant performance boosts to our platform."</p>
           <h5>John Allendane, Product Manager</h5>
         </div>
         <div className="testimonial">
-          <p>“His system design ensured flawless uptime during peak traffic.”</p>
+          <p>"His system design ensured flawless uptime during peak traffic."</p>
           <h5>Anamika Sandula, CTO</h5>
         </div>
       </section>
 
       <section className="cta">
-        <h2>Let’s Build Something Extraordinary Together</h2>
+        <h2>Let's Build Something Extraordinary Together</h2>
         <a href="#contact">Get in Touch</a>
       </section>
 
       <section id="contact" className="contact">
         <div className="contact-card">
           <h2>Contact Me</h2>
-          <p>Noida Electronic City, Sector-62, Noida</p>
-          <p>✉️ mdmonagirhussan99@gmail.com | 📞 +91 8406092514</p>
+          <div className="contact-info">
+            <p>Noida Electronic City, Sector-62, Noida</p>
+            <a href="mailto:mdmonagirhussan99@gmail.com" className="contact-item">
+              <FaEnvelope />
+              <span>mdmonagirhussan99@gmail.com</span>
+            </a>
+            <a href="tel:+918406092514" className="contact-item">
+              <FaPhone />
+              <span>+91 8406092514</span>
+            </a>
+          </div>
           <div className="contact-links">
             <a href="https://github.com/monagirhussan786" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://linkedin.com/in/md-monagir-hussan-7140b7266" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -441,7 +561,10 @@ app.listen(3000, () => {
       </footer>
 
       {showBackToTop && (
-        <button className="back-to-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <button 
+          className="back-to-top" 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
           ↑
         </button>
       )}
