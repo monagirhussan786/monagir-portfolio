@@ -239,7 +239,7 @@ if __name__ == '__main__':
         <div className="about-card">
           <h2>About Me</h2>
           <p>
-          I’m a Full Stack MERN Developer with 3.6+ years of experience in building high-performance, AI-powered web applications using clean architecture and scalable system design. I specialize in combining modern development practices with cutting-edge AI and cloud technologies (AWS) to deliver intelligent, end-to-end solutions that solve real-world problems and drive business value.
+          I'm a Full Stack MERN Developer with 3.6+ years of experience in building high-performance, AI-powered web applications using clean architecture and scalable system design. I specialize in combining modern development practices with cutting-edge AI and cloud technologies (AWS) to deliver intelligent, end-to-end solutions that solve real-world problems and drive business value.
           </p>
         </div>
       </section>
@@ -424,7 +424,7 @@ if __name__ == '__main__':
             <img src="/images/eCommerce.jpeg" alt="E-Commerce App" />
             <div className="project-content">
               <h4>E-Commerce Web App</h4>
-              <p>A scalable platform with real-time updates, secure payment gateways, and a user-friendly interface.</p>
+              <p className="project-desc-highlight">A scalable platform with real-time updates, secure payment gateways, and a user-friendly interface.</p>
               <div className="project-tech">
                 <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>AWS</span>
               </div>
@@ -439,7 +439,7 @@ if __name__ == '__main__':
             <img src="/images/group-chat-app.webp" alt="Group Chat App" />
             <div className="project-content">
               <h4>Group Chat App</h4>
-              <p>Real-time messaging app with socket-based communication and group chat functionality.</p>
+              <p className="project-desc-highlight">Real-time messaging app with socket-based communication and group chat functionality.</p>
               <div className="project-tech">
                 <span>React.js</span><span>Express.js</span><span>Socket.io</span><span>MongoDB</span>
               </div>
@@ -454,7 +454,7 @@ if __name__ == '__main__':
             <img src="/images/image-crm.webp" alt="CRM System" />
             <div className="project-content">
               <h4>CRM System</h4>
-              <p>A robust tool for managing customer data, sales pipelines, and analytics.</p>
+              <p className="project-desc-highlight">A robust tool for managing customer data, sales pipelines, and analytics.</p>
               <div className="project-tech">
                 <span>React.js</span><span>Node.js</span><span>PostgreSQL</span><span>GraphQL</span>
               </div>
@@ -469,7 +469,7 @@ if __name__ == '__main__':
             <img src="/images/expense-tracker-dashboard.webp" alt="Expense Tracker" />
             <div className="project-content">
               <h4>Expense Tracker App</h4>
-              <p>A full-stack finance app with budgeting tools and insightful analytics.</p>
+              <p className="project-desc-highlight">A full-stack finance app with budgeting tools and insightful analytics.</p>
               <div className="project-tech">
                 <span>React.js</span><span>Express.js</span><span>MongoDB</span><span>Material UI</span>
               </div>
@@ -484,7 +484,7 @@ if __name__ == '__main__':
             <img src="/images/Social-Media-App.png" alt="Social Media App" />
             <div className="project-content">
               <h4>Social Media App</h4>
-              <p>A platform with posts, comments, likes, and real-time notifications.</p>
+              <p className="project-desc-highlight">A platform with posts, comments, likes, and real-time notifications.</p>
               <div className="project-tech">
                 <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Socket.io</span>
               </div>
@@ -499,7 +499,7 @@ if __name__ == '__main__':
             <img src="/images/ui-designers.webp" alt="Mobile App Design" />
             <div className="project-content">
               <h4>Mobile App Design</h4>
-              <p>A cross-platform mobile app with intuitive UI/UX and seamless performance.</p>
+              <p className="project-desc-highlight">A cross-platform mobile app with intuitive UI/UX and seamless performance.</p>
               <div className="project-tech">
                 <span>React Native</span><span>TypeScript</span><span>Firebase</span><span>Redux</span>
               </div>
