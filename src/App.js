@@ -205,6 +205,7 @@ if __name__ == '__main__':
             <a href="#certifications" onClick={() => setIsNavOpen(false)}>Certifications</a>
             <a href="#education" onClick={() => setIsNavOpen(false)}>Education</a>
             <a href="#contact" onClick={() => setIsNavOpen(false)}>Contact</a>
+            <a href="https://careerhubmonagirblog.vercel.app/" target='blank'>Blog</a>
           </nav>
         </div>
       </header>
