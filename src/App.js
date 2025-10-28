@@ -551,7 +551,7 @@ if __name__ == '__main__':
             </a>
           </div>
           <div className="contact-links">
-            <a href="https://github.com/monagirhussan786" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/md-monagir-hussan-7140b7266" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://linkedin.com/in/md-monagir-hussan-7140b7266" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
         </div>
