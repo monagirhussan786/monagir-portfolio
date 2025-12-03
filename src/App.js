@@ -4,7 +4,7 @@ import './App.css';
 import ParticleAnimation from './components/ParticleAnimation';
 import AICodeBlock from './components/AICodeBlock';
 import { FaJs, FaReact, FaHtml5, FaCss3, FaNodeJs, FaServer, FaDatabase, FaAws, FaDocker, FaGit, FaGithub, FaJira, FaSlack, FaCode, FaEnvelope, FaPhone } from 'react-icons/fa';
-import { SiRedux, SiGraphql, SiTypescript, SiMongodb, SiMysql, SiPostgresql, SiAmazonwebservices, SiDocker as SiDockerIcon, SiGit as SiGitIcon, SiGithub as SiGithubIcon, SiJira as SiJiraIcon, SiSlack as SiSlackIcon } from 'react-icons/si';
+import { SiRedux, SiGraphql, SiTypescript, SiMongodb, SiMysql, SiPostgresql, SiAmazonwebservices, SiDocker as SiDockerIcon, SiGit as SiGitIcon, SiGithub as SiGithubIcon, SiJira as SiJiraIcon, SiSlack as SiSlackIcon, SiNextdotjs, SiAngular, SiTensorflow, SiPytorch, SiScikitlearn, SiN8N } from 'react-icons/si';
 
 export default function App() {
   const [line1, setLine1] = useState('');
@@ -13,7 +13,7 @@ export default function App() {
   const [showCursor, setShowCursor] = useState(true);
   const fullLine1 = "Hey There";
   const fullLine2 = "I'm Md Monazir Hussan";
-  const fullDescription = "Engineering Smart, Scalable & AI-Driven Web Platforms with MERN Stack & AWS — Delivering Cloud-Native Solutions from Clean Architecture to Production with End-to-End Ownership, Modern Dev Practices & Real-World Impact";
+  const fullDescription = "Results-driven Full Stack MERN Developer with over 4 years of experience in architecting and deploying scalable web applications. Expert in JavaScript, React.js, Next.js, Node.js, Express.js, MongoDB, and AWS. Proficient in integrating AI, Large Language Models (LLMs) and Agentic AI to enhance functionality and user experience.";
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [startCount, setStartCount] = useState(false);
   const statsRef = useRef(null);
@@ -240,7 +240,7 @@ if __name__ == '__main__':
         <div className="about-card">
           <h2>About Me</h2>
           <p>
-          I'm a Full Stack MERN Developer with 3.6+ years of experience in building high-performance, AI-powered web applications using clean architecture and scalable system design. I specialize in combining modern development practices with cutting-edge AI and cloud technologies (AWS) to deliver intelligent, end-to-end solutions that solve real-world problems and drive business value.
+          Results-driven Full Stack MERN Developer with over 4 years of experience in architecting and deploying scalable web applications. Expert in JavaScript, React.js, Next.js, Node.js, Express.js, MongoDB, and AWS. Proficient in integrating AI, Large Language Models (LLMs) and Agentic AI to enhance functionality and user experience. Skilled in leading cross-functional teams, mentoring developers, and optimizing system performance. Known for delivering high-impact, end-to-end solutions on time, with a focus on scalability and measurable business outcomes.
           </p>
         </div>
       </section>
@@ -252,7 +252,7 @@ if __name__ == '__main__':
             <ul>
               <li>AWS Certified Solutions Architect – Associate</li>
               <li>Full Stack Web Development (React & Node.js)</li>
-              <li>Machine Learning & AI Certification</li>
+              <li>Agile Scrum Master</li>
             </ul>
           </div>
           <div className="code-matrix">
@@ -264,7 +264,7 @@ if __name__ == '__main__':
       <section id="skills" className="skills">
         <h2>My Expertise</h2>
         <p className="expertise-summary">
-          I build high-performance, scalable web applications from the ground up, with deep proficiency in the MERN stack and cloud technologies like AWS. My expertise covers the full development lifecycle, from creating intuitive front-end experiences with React to architecting robust back-end services with Node.js and deploying them with Docker.
+          I build high-performance, scalable web applications from the ground up, with deep proficiency in the MERN stack, AI technologies, and cloud platforms like AWS. My expertise covers the full development lifecycle, from creating intuitive front-end experiences with React and Next.js to architecting robust back-end services with Node.js, integrating AI and LLMs, and deploying them with Docker and CI/CD pipelines.
         </p>
         <div className="skill-category technical-skills">
           <h3>Technical Skills</h3>
@@ -273,6 +273,8 @@ if __name__ == '__main__':
             <ul>
               <li><FaJs /> JavaScript</li>
               <li><FaReact /> React.js</li>
+              <li><SiNextdotjs /> Next.js</li>
+              <li><SiAngular /> Angular</li>
               <li><FaHtml5 /> HTML5</li>
               <li><FaCss3 /> CSS3</li>
               <li><SiRedux /> Redux</li>
@@ -306,6 +308,18 @@ if __name__ == '__main__':
             </ul>
           </div>
           <div className="subcategory">
+            <h4>AI & LLMs</h4>
+            <ul>
+              <li><SiTensorflow /> TensorFlow</li>
+              <li><SiPytorch /> PyTorch</li>
+              <li><SiScikitlearn /> scikit-learn</li>
+              <li><FaCode /> Natural Language Processing (NLP)</li>
+              <li><FaCode /> Predictive Analytics</li>
+              <li><FaCode /> Generative AI</li>
+              <li><FaCode /> Agentic AI</li>
+            </ul>
+          </div>
+          <div className="subcategory">
             <h4>Version Control & Collaboration</h4>
             <ul>
               <li><SiGitIcon /> Git</li>
@@ -321,18 +335,18 @@ if __name__ == '__main__':
               <li><FaServer /> Agile/Scrum</li>
               <li><SiJiraIcon /> Jira</li>
               <li><FaServer /> MS Project</li>
+              <li><SiN8N /> n8n</li>
             </ul>
           </div>
         </div>
         <div className="skill-category professional-strengths">
           <h3>Professional Strengths</h3>
           <ul>
-            <li>Full Stack Development</li>
-            <li>API Design & Integration</li>
-            <li>Cloud Architecture & Scalability</li>
-            <li>Agile Practices</li>
-            <li>Leadership & Mentorship</li>
-            <li>Problem Solving</li>
+            <li>Full Stack Expertise: Proficient in building robust MERN stack applications</li>
+            <li>API Development: Skilled in designing scalable RESTful and GraphQL APIs</li>
+            <li>AI & LLM Integration: Experienced in deploying AI and Large Language Models, and Agentic AI for enhanced functionality</li>
+            <li>Cloud Architecture: Adept at leveraging AWS for scalable deployments</li>
+            <li>Leadership: Proven ability to lead teams and mentor junior developers</li>
           </ul>
         </div>
         <div className="skill-category soft-skills">
@@ -362,6 +376,10 @@ if __name__ == '__main__':
         <div className="service">
           <h3>API Design & Integration</h3>
           <p>Building seamless RESTful and GraphQL APIs for efficiency</p>
+        </div>
+        <div className="service">
+          <h3>AI & LLM Integration</h3>
+          <p>Deploying AI, Large Language Models, and Agentic AI for enhanced functionality</p>
         </div>
         <div className="service">
           <h3>Cloud Solutions</h3>
@@ -396,22 +414,29 @@ if __name__ == '__main__':
           <div className="entry entry-1">
             <div className="entry-icon">💼</div>
             <div className="entry-content">
-              <div className="entry-date">Jun 2022 – Present</div>
+              <div className="entry-date">06/2022 – Present</div>
               <h3>Full Stack MERN Developer @ Xotive Technologies</h3>
               <p>
-                Led an 11-member team to launch an e-commerce platform and ERP system, boosting revenue by 25%. 
-                Achieved a perfect 100/100 Lighthouse score and optimized backend to handle 96,000 req/sec.
+                • Led a team of 11 developers to design and launch an e-commerce platform, resolving 45+ features and bugs, enhancing user satisfaction by 20%.<br/>
+                • Spearheaded implementation of an ERP system, collaborating with Technology, Business Development, and Management teams, boosting revenue by 25% in one year.<br/>
+                • Earned promotion within 6 months for exceptional performance, six months ahead of schedule.<br/>
+                • Developed a high-performance e-commerce front-end using React.js with 14,000 reusable components, achieving a Lighthouse score of 100/100.<br/>
+                • Optimized MongoDB data models and service layers to handle 74,000–96,000 requests/sec during flash sales.<br/>
+                • Integrated an AI-driven recommendation engine using TensorFlow, increasing user engagement by 15%.
               </p>
             </div>
           </div>
           <div className="entry entry-2">
             <div className="entry-icon">💻</div>
             <div className="entry-content">
-              <div className="entry-date">Aug 2021 – May 2022</div>
+              <div className="entry-date">08/2021 – 05/2022</div>
               <h3>Full Stack Developer @ WebInOrbit</h3>
               <p>
-                Developed web apps with React, Node.js, and Sails.js, integrating APIs like Google Maps and payment gateways, 
-                while optimizing large-scale data processing.
+                • Developed scalable web applications using React, Node.js, and Sails.js, leveraging MySQL, PostgreSQL, and MongoDB.<br/>
+                • Designed and implemented RESTful APIs, integrating third-party services like Google Maps, Mapbox, and payment gateways.<br/>
+                • Applied distributed computing and large-scale design to optimize real-time data processing for web applications.<br/>
+                • Built a data analytics module to analyze user trends, improving application performance by 20%.<br/>
+                • Wrote 200+ unit tests, ensuring 100% bug-free code within the SDLC.
               </p>
             </div>
           </div>
@@ -425,9 +450,9 @@ if __name__ == '__main__':
             <img src="/images/eCommerce.jpeg" alt="E-Commerce App" />
             <div className="project-content">
               <h4>E-Commerce Web App</h4>
-              <p className="project-desc-highlight">A scalable platform with real-time updates, secure payment gateways, and a user-friendly interface.</p>
+              <p className="project-desc-highlight">Built a scalable platform with real-time updates and secure payment integrations using React, Node.js, and MongoDB. Integrated AI-based recommendation system with TensorFlow, boosting sales by 10%.</p>
               <div className="project-tech">
-                <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>AWS</span>
+                <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>TensorFlow</span>
               </div>
               <div className="project-links">
                 <a href="#" target="_blank" rel="noreferrer">Live Demo</a>
@@ -440,7 +465,7 @@ if __name__ == '__main__':
             <img src="/images/group-chat-app.webp" alt="Group Chat App" />
             <div className="project-content">
               <h4>Group Chat App</h4>
-              <p className="project-desc-highlight">Real-time messaging app with socket-based communication and group chat functionality.</p>
+              <p className="project-desc-highlight">Developed a real-time messaging app with socket-based communication and user authentication using Socket.io and Express.js.</p>
               <div className="project-tech">
                 <span>React.js</span><span>Express.js</span><span>Socket.io</span><span>MongoDB</span>
               </div>
@@ -455,24 +480,9 @@ if __name__ == '__main__':
             <img src="/images/image-crm.webp" alt="CRM System" />
             <div className="project-content">
               <h4>CRM System</h4>
-              <p className="project-desc-highlight">A robust tool for managing customer data, sales pipelines, and analytics.</p>
+              <p className="project-desc-highlight">Created a system for managing customer data and sales pipelines. Added an LLM-based churn prediction model, reducing churn by 8%.</p>
               <div className="project-tech">
-                <span>React.js</span><span>Node.js</span><span>PostgreSQL</span><span>GraphQL</span>
-              </div>
-              <div className="project-links">
-                <a href="#" target="_blank" rel="noreferrer">Live Demo</a>
-                <a href="#" target="_blank" rel="noreferrer">GitHub</a>
-                <a href="#" className="view-details">View Details</a>
-              </div>
-            </div>
-          </div>
-          <div className="project">
-            <img src="/images/expense-tracker-dashboard.webp" alt="Expense Tracker" />
-            <div className="project-content">
-              <h4>Expense Tracker App</h4>
-              <p className="project-desc-highlight">A full-stack finance app with budgeting tools and insightful analytics.</p>
-              <div className="project-tech">
-                <span>React.js</span><span>Express.js</span><span>MongoDB</span><span>Material UI</span>
+                <span>React.js</span><span>Node.js</span><span>PostgreSQL</span><span>LLM</span>
               </div>
               <div className="project-links">
                 <a href="#" target="_blank" rel="noreferrer">Live Demo</a>
@@ -485,9 +495,39 @@ if __name__ == '__main__':
             <img src="/images/Social-Media-App.png" alt="Social Media App" />
             <div className="project-content">
               <h4>Social Media App</h4>
-              <p className="project-desc-highlight">A platform with posts, comments, likes, and real-time notifications.</p>
+              <p className="project-desc-highlight">Designed a platform with posts, comments, and notifications using MERN stack.</p>
               <div className="project-tech">
-                <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Socket.io</span>
+                <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Express.js</span>
+              </div>
+              <div className="project-links">
+                <a href="#" target="_blank" rel="noreferrer">Live Demo</a>
+                <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="#" className="view-details">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div className="project">
+            <img src="/images/ui-designers.webp" alt="AI Chatbot" />
+            <div className="project-content">
+              <h4>AI Chatbot</h4>
+              <p className="project-desc-highlight">Built a conversational chatbot using TensorFlow and LLMs for customer support, reducing response time by 30%.</p>
+              <div className="project-tech">
+                <span>TensorFlow</span><span>LLMs</span><span>Node.js</span><span>React.js</span>
+              </div>
+              <div className="project-links">
+                <a href="#" target="_blank" rel="noreferrer">Live Demo</a>
+                <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="#" className="view-details">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div className="project">
+            <img src="/images/expense-tracker-dashboard.webp" alt="AI Sales Forecasting" />
+            <div className="project-content">
+              <h4>AI-Powered Sales Forecasting Tool</h4>
+              <p className="project-desc-highlight">Developed a predictive tool with scikit-learn, enhancing inventory management by 15%.</p>
+              <div className="project-tech">
+                <span>scikit-learn</span><span>Python</span><span>React.js</span><span>Node.js</span>
               </div>
               <div className="project-links">
                 <a href="#" target="_blank" rel="noreferrer">Live Demo</a>
