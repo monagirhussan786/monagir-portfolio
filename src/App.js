@@ -443,6 +443,14 @@ if __name__ == '__main__':
         </div>
       </section>
 
+      <section className="freelancing-section">
+        <div className="freelancing-content">
+          <h2>I'm <span className="highlight-yellow">Available</span> for freelancing</h2>
+          <p>I am available for freelance web development projects, ready to bring your ideas to life with expertise and creativity. Let's collaborate and create something amazing together.</p>
+          <a href="#contact" className="freelancing-cta">Hire Me</a>
+        </div>
+      </section>
+
       <section id="projects">
         <h2>Signature Projects</h2>
         <div className="projects-grid">
